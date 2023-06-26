@@ -1,0 +1,35 @@
+/* Enter your custom styles here */
+
+/* .sapUiVlt.sapUiContentPadding > .sapuiVltCell:not(:last-child) {
+  padding-bottom: 3px;
+} */
+
+.pageDetail .sapFDynamicPageContentFitContainer,
+.pageDetail .sapFDynamicPage-Std-Tablet .sapFDynamicPageContentFitContainer,
+.pageDetail .sapFDynamicPage-Std-Phone .sapFDynamicPageContentFitContainer,
+.pageDetail .sapFDynamicPageContent,
+.pageDetail .sapFDynamicPage-Std-Tablet .sapFDynamicPageContent, 
+.pageDetail .sapFDynamicPage-Std-Phone .sapFDynamicPageContent {
+  padding: 0;
+}
+
+.pageDetail .sapMITBContainerContent {
+  padding: 0.5rem;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.px-1 {
+  padding-left: 1px !important;
+  padding-right: 1px !important;
+}
+
+.fs-1rem {
+  font-size: 1rem !important;
+}
+
+.mt-1 {
+  margin-top: 1rem !important;
+}

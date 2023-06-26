@@ -1,0 +1,23 @@
+specVersion: "2.6"
+metadata:
+  name: "sap.nexus.zdemo"
+type: application
+framework:
+  name: SAPUI5
+  version: "1.100.2"
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: true
+        backend:
+          - path: /sap
+            # url: http://s4hana1809.nexus-sr.com:8000
+            # url: https://vhsuhsedci.sap.southcitygroup.com:44300
+            url: http://localhost
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp

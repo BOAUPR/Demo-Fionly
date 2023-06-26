@@ -1,0 +1,18 @@
+<mvc:View controllerName="sap.nexus.zdemo.controller.App"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:f="sap.f"
+          displayBlock="true"
+          height="100%">
+
+  <App 
+    id="app"
+    busy="{app>/busy}"
+    busyIndicatorDelay="{app>/delay}">
+    <f:FlexibleColumnLayout 
+      id="layout" 
+      stateChange="onStateChanged" 
+      backgroundDesign="Solid" 
+      layout="{app>/layout}" />
+  </App>
+</mvc:View>
