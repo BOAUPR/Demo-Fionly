@@ -1,0 +1,43 @@
+ attachRouteMatched: async function (oEvent){
+          if(!=this.getModel("home")){
+		return this.oRouter.navTo("home", {}, true);
+		}
+	  switch (oEvent.getParameter("name") {
+	    case "home":
+		  this.init();
+		  break;
+
+	    case "item":
+		const sSO = this.getModel("home").getProperty("/so");
+            	if(sSO){
+              	   const oFilters = new Array();
+  
+                   const oFilter = new sap.ui.model.Filter({
+               	   	path: "VBELN",
+                   	operator: sap.ui.model.FilterOperator.EQ,
+                   	Value1: sSO,
+                   	})
+  		   
+		   oFilters.push(oFilter);
+            
+              	   const response = await new Promise((resolve, reject) => {
+                      this.getModel().read("/LIST_SO_ITEM", {
+                  	filters: [oFilters],
+                  	success: (data) => resolve(data.results),
+                  	error: (err) => reject(err),
+                	});
+              	   });
+              
+              this.getModel("item").setProperty("/item_so_list", response);
+              console.log(response);
+            }
+	    init function(){
+		this.byID("sSO").setValue("");
+		this.getModel("item").setProperty("/items", null);
+		this.getModel("home").setProperty("/f4_so_list", null);
+	    },
+          }
+        },
+      });
+    }
+  );

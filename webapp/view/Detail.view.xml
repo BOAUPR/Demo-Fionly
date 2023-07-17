@@ -1,0 +1,31 @@
+<mvc:View controllerName="sap.nexus.zdemo.controller.Detail"
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
+  xmlns:core="sap.ui.core"
+  xmlns:mvc="sap.ui.core.mvc">
+
+  <Page id="detailPage" title="{i18n>detailTitle}" busy="{detail>/busy}" busyIndicatorDelay="{detail>/delay}">
+    <content>
+      <l:VerticalLayout class="sapUiContentPadding" width="100%" >
+        <Label text="Item" labelFor="itemInput" />
+        <Input id="itemInput" value = "{detail>/POSNR}" editable="false" />
+
+        <Label text="Material" labelFor="matInput" />
+        <Input id="matInput" value = "{detail>/MATNR}" editable="false" />
+
+        <Label text="Quantity" labelFor="qtyInput" />
+        <Input id="qtyInput" required="true"  value = "{detail>/KWMENG}" />
+
+        <Label text="Unit" labelFor="unitInput" />
+        <Input id="unitInput" value = "{detail>/VRKME}" editable="false" />
+      </l:VerticalLayout>
+    </content>
+
+    <footer>
+      <Toolbar>
+        <ToolbarSpacer />
+        <Button text="Back" press="onPressBack" />
+      </Toolbar>
+    </footer>
+  </Page>
+</mvc:View>

@@ -6,7 +6,7 @@ sap.ui.define(
     return BaseController.extend("sap.nexus.zdemo.App", {
       onInit: function () {
         this.oRouter = this.getRouter();
-        this.oRouter.attachRouteMatched(this.attachRouteMatched, this);
+        // this.oRouter.attachRouteMatched(this.attachRouteMatched, this);
 
         this.setModel(
           new JSONModel({

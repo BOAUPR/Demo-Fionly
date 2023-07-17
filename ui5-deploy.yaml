@@ -1,0 +1,26 @@
+specVersion: "2.6"
+metadata:
+  name: "sap.nexus.zdemo"
+type: application
+  # name: "sap.nexus.handheld.gr_ref_po"
+builder:
+  customTasks:
+  - name: deploy-to-abap
+    afterTask: generateCachecusterInfo
+    configuration:
+      ignoreCertError: true
+      target:
+        url: http://s4hana1809.nexus-sr.com:8000
+        client: 300
+        auth: basic
+      credentials:
+        username: env:Z_USER
+        password: env:Z_PASSWORD
+      app:
+        name: ZDEMO_FANG
+        description: Demo Fiori App
+        package: ZDEV
+        transport:  S4HK901167
+      exclude:
+      - /test
+      - /localService

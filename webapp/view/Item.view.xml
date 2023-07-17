@@ -1,0 +1,37 @@
+<mvc:View controllerName="sap.nexus.zdemo.controller.Item"
+          xmlns="sap.m"
+          xmlns:l="sap.ui.layout"
+          xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc">
+
+  <Page id="itemPage" title="{i18n>itemTitle}" busy="{item>/busy}" busyIndicatorDelay="{item>/delay}">
+    <content>
+      <List items="{item>/list_so_item}" 
+            headerText="Sales Order: {home>/so}">
+        <ObjectListItem title="{item>MATNR}"
+                        type="Active"
+                        press="onListItemPress"
+                        number="{
+                                  parts:[{path:'item>KWMENG'},{path:'item>VRKME'}],
+                                  type: 'sap.ui.model.type.Unit',
+                                  formatOptions: {showMeasure: false} 
+                                }"
+                        numberUnit="{item>VRKME}">
+          <ObjectAttribute text="Item: {item>POSNR}" />
+          <customData>
+            <core:CustomData key="vbeln" value="{item>VBELN}" />
+            <core:CustomData key="posnr" value="{item>POSNR}" />
+          </customData>
+
+        </ObjectListItem>
+      </List>
+    </content>
+                
+    <footer>
+      <Toolbar>
+        <ToolbarSpacer />
+        <Button text="Update" press="onPressUpdate" />
+      </Toolbar>
+    </footer>
+  </Page>
+</mvc:View>

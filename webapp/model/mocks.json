@@ -1,0 +1,45 @@
+{
+    "f4_so": [
+        {
+            "VBELN": "10"
+        },
+        {
+            "VBELN": "11"
+        },
+        {
+            "VBELN": "12"
+        },
+        {
+            "VBELN": "20"
+        },
+        {
+            "VBELN": "21"
+        },
+        {
+            "VBELN": "30"
+        }
+    ],
+    "list_so_item": [
+        {
+            "VBELN": "10",
+            "POSNR": "000010",
+            "MATNR": "A",
+            "KWMENG": 10,
+            "VRKME": "EA"
+        },
+        {
+            "VBELN": "10",
+            "POSNR": "000020",
+            "MATNR": "B",
+            "KWMENG": 20,
+            "VRKME": "EA"
+        },
+        {
+            "VBELN": "10",
+            "POSNR": "000030",
+            "MATNR": "C",
+            "KWMENG": 10,
+            "VRKME": "EA"
+        }
+    ]
+}

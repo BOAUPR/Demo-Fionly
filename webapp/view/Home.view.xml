@@ -5,7 +5,24 @@
           xmlns:mvc="sap.ui.core.mvc">
 
   <Page id="homePage" title="{i18n>homeTitle}" busy="{home>/busy}" busyIndicatorDelay="{home>/delay}">
-    <content></content>
+    <content>
+      <l:VerticalLayout class="sapUiContentPadding" width="100%">
+        <Label text="Sales Order" labelFor="soInput" />
+        <Input id="soInput" 
+          placeholder="Enter Sales Order" 
+          change="onChange"
+          liveChange="onLiveChange"
+          showSuggestion="true" 
+          suggestionItems="{home>/f4_so_list}">        
+                    <!-- suggestionItems="{/ProductCollection}">   -->
+
+          <suggestionItems>
+            <!-- <core:Item text="{Name}" /> -->
+            <core:Item text="{home>VBELN}" />
+          </suggestionItems>
+        </Input>
+      </l:VerticalLayout>
+    </content>
                 
     <footer>
       <Toolbar>

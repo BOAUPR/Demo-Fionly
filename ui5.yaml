@@ -13,9 +13,9 @@ server:
         ignoreCertError: true
         backend:
           - path: /sap
-            # url: http://s4hana1809.nexus-sr.com:8000
+            url: http://s4hana1809.nexus-sr.com:8000
             # url: https://vhsuhsedci.sap.southcitygroup.com:44300
-            url: http://localhost
+            # url: http://localhost
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

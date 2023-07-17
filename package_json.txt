@@ -1,7 +1,6 @@
 {
   "name": "zdemo",
   "version": "1.0.0",
-  "description": "",
   "main": "webapp/index.html",
   "scripts": {
     "start": "fiori run --open 'index.html?sap-client=300'",
@@ -20,5 +19,10 @@
     "@ui5/cli": "^2.14.10",
     "lodash": "4.17.21",
     "rimraf": "3.0.2"
+  },
+  "description": "",
+  "dependencies": {
+    "to": "^0.2.9",
+    "update": "^0.7.4"
   }
 }
